@@ -13,7 +13,7 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Source Files\Source Code">
+    <Filter Include="Source Code">
       <UniqueIdentifier>{dd2b6e5d-b7b6-4ed9-88f5-75f5fd936bcb}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -24,10 +24,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Danhsach.cpp">
-      <Filter>Source Files\Source Code</Filter>
+      <Filter>Source Code</Filter>
     </ClCompile>
     <ClCompile Include="Main.cpp">
-      <Filter>Source Files\Source Code</Filter>
+      <Filter>Source Code</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
