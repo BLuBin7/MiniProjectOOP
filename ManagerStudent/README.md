@@ -1,1 +1,1 @@
-# ManagerStudent
+# ManagerStudent with console app
