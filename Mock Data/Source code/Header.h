@@ -45,17 +45,27 @@ public:
 		return result;
 	}
 	string getlname() { 
-		return _lastname; 
+		return this->_lastname; 
 	}
 
 	string getmname() { 
-		return _middlename; 
+		return this->_middlename; 
 	}
 
 	string getfname() { 
-		return _firstname; 
+		return this->_firstname; 
 	}
 
-	void setLname(string Lname) { 
-		_lastname = Lname; 
+	void setLname(string value) {
+		this->_lastname = value;
 	}
+
+	void setMname(string value) { 
+		this->_middlename = value; 
+	}
+
+	void setFname(string value) { 
+		this->_firstname = value; 
+	}
+
+
