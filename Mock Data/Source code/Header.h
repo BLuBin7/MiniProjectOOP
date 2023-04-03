@@ -70,4 +70,8 @@ public:
 
 };
 
-
+class date {
+private:
+	int _day;
+	int _month;
+	int _year;
