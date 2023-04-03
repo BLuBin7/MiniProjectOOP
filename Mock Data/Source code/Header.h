@@ -34,3 +34,14 @@ public:
 		_middlename = middle;
 		_lastname = last;
 	}
+	string toString() {
+		stringstream builder;
+
+		builder << _lastname << " "
+			<< _middlename << " "
+			<< _firstname;
+
+		string result = builder.str();
+		return result;
+	}
+	string lname() { return _lastname; }
