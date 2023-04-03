@@ -140,3 +140,7 @@ public:
 	void setDay(int day) {
 		this->_day = day; 
 	}
+
+	void setMonth(int month) { 
+		this->_month = month; 
+	}
