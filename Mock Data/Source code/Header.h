@@ -17,3 +17,10 @@ public:
 	int next(int);
 	int next(int, int);
 };
+
+class Fullname {
+private:
+	string _firstname;
+	string _middlename;
+	string _lastname;
+public:
