@@ -136,3 +136,7 @@ public:
 	int getYear() { 
 		return this->_year; 
 	}
+
+	void setDay(int day) {
+		this->_day = day; 
+	}
