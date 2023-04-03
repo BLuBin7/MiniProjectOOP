@@ -68,4 +68,6 @@ public:
 		this->_firstname = value; 
 	}
 
+};
+
 
