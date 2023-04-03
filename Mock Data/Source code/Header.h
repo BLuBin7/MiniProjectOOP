@@ -137,15 +137,18 @@ public:
 		return this->_year; 
 	}
 
-	void setDay(int day) {
-		this->_day = day; 
+	void setDay(int value) {
+		this->_day = value; 
 	}
 
-	void setMonth(int month) { 
-		this->_month = month; 
+	void setMonth(int value) { 
+		this->_month = value; 
 	}
 
-	void setYear(int year) { 
-		this->_year = year; 
+	void setYear(int value) { 
+		this->_year = value; 
 	}
+
+	string toString();
+};
 
