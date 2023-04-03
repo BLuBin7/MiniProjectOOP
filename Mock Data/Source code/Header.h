@@ -124,3 +124,15 @@ public:
 			}
 		}
 	}
+
+	int getDay() { 
+		return this->_day; 
+	}
+
+	int getMonth() { 
+		return this->_month; 
+	}
+
+	int getYear() { 
+		return this->_year; 
+	}
