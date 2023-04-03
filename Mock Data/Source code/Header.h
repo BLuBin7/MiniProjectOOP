@@ -55,3 +55,7 @@ public:
 	string getfname() { 
 		return _firstname; 
 	}
+
+	void setLname(string Lname) { 
+		_lastname = Lname; 
+	}
