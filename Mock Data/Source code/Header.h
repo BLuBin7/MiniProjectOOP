@@ -44,4 +44,10 @@ public:
 		string result = builder.str();
 		return result;
 	}
-	string lname() { return _lastname; }
+	string getlname() { 
+		return _lastname; 
+	}
+
+	string getmname() { 
+		return _middlename; 
+	}
