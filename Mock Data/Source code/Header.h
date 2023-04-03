@@ -24,3 +24,8 @@ private:
 	string _middlename;
 	string _lastname;
 public:
+	Fullname() {
+		_firstname = "";
+		_middlename = "";
+		_lastname = "";
+	}
