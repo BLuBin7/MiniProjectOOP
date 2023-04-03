@@ -75,3 +75,9 @@ private:
 	int _day;
 	int _month;
 	int _year;
+public:
+	date() {
+		_day = 1;
+		_month = 1;
+		_year = 1970;
+	}
