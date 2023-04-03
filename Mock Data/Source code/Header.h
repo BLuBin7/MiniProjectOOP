@@ -83,7 +83,44 @@ public:
 	}
 
 	date(int day, int month, int year) {
-		this->_day = day;
-		this->_month = month;
-		this->_year = year;
+		if (year < 0 || month < 0 || month> 12 || day < 0 || day> 31)
+		{
+			cout << "Ngay khong hop le";
+		}
+		else
+		{
+			switch (month)
+			{
+			case 1: this->_month = month;
+			case 3: this->_month = month;
+			case 5: this->_month = month;
+			case 7: this->_month = month;
+			case 8: this->_month = month;
+			case 10: this->_month = month;
+			case 12:
+				ngaymax = 31;
+				this->_month = month;
+				break;
+			case 2:
+				if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0))
+					ngaymax = 29;
+				else
+					ngaymax = 28;
+				break;
+			case 4: this->_month = month;
+			case 6: this->_month = month;
+			case 9: this->_month = month;
+			case 11: this->_month = month;
+				ngaymax = 30;
+				break;
+			}
+			if (day <= ngaymax)
+			{
+				this->_day = day;
+			}
+			else
+			{
+				cout << "Ngay khong hop le !" << "\n";
+			}
+		}
 	}
