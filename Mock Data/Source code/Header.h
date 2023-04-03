@@ -10,3 +10,10 @@ class Number {
 public:
 	unsigned long RandomInteger(long, long);
 };
+
+class RandomIntegerGenerator {
+public:
+	int next();
+	int next(int);
+	int next(int, int);
+};
