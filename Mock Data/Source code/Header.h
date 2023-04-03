@@ -29,3 +29,8 @@ public:
 		_middlename = "";
 		_lastname = "";
 	}
+	Fullname(string first, string middle, string last) {
+		_firstname = first;
+		_middlename = middle;
+		_lastname = last;
+	}
