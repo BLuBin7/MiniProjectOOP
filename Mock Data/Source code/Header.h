@@ -51,3 +51,7 @@ public:
 	string getmname() { 
 		return _middlename; 
 	}
+
+	string getfname() { 
+		return _firstname; 
+	}
