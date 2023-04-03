@@ -14,4 +14,23 @@
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Source code\Header.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Source code\Source.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="File\Address.csv" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="File\Ho.txt" />
+    <Text Include="File\Student.txt" />
+    <Text Include="File\Ten.txt" />
+    <Text Include="File\Tenlot.txt" />
+  </ItemGroup>
 </Project>

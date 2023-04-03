@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{b0b12b9b-d9e5-4a41-b6a9-cee08e6bfb94}</ProjectGuid>
-    <RootNamespace>ManagerStudent</RootNamespace>
+    <ProjectGuid>{49619fd0-00e7-4b2e-9cb6-8306c8d5d536}</ProjectGuid>
+    <RootNamespace>StudentManager</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -127,14 +127,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Danhsach.h" />
+    <ClCompile Include="Source code\Danhsach.cpp" />
+    <ClCompile Include="Source code\Main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Danhsach.cpp" />
-    <ClCompile Include="Main.cpp">
-      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-      </DisableSpecificWarnings>
-    </ClCompile>
+    <ClInclude Include="Source code\Danhsach.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
