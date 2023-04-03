@@ -81,3 +81,9 @@ public:
 		_month = 1;
 		_year = 1970;
 	}
+
+	date(int day, int month, int year) {
+		this->_day = day;
+		this->_month = month;
+		this->_year = year;
+	}
