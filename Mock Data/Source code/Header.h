@@ -144,3 +144,8 @@ public:
 	void setMonth(int month) { 
 		this->_month = month; 
 	}
+
+	void setYear(int year) { 
+		this->_year = year; 
+	}
+
