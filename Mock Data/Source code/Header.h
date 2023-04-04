@@ -258,4 +258,8 @@ public:
 class FakeFullnameGenerator {
 private:
 	vector<string> _CommonlastNames;
+	vector<string> _firstNames;
+	vector<string> _middleNames;
+	vector<string> _lastNames;
+	RandomIntegerGenerator _rng;
 };
