@@ -270,4 +270,6 @@ public:
 class FakeGPA {
 private:
 	RandomIntegerGenerator _rng;
+public:
+	double rand_gpa();
 };
