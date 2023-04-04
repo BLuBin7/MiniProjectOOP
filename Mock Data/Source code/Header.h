@@ -189,33 +189,37 @@ public:
 	}
 
 	double getGPA() { 
-		return _GPA; 
+		return this->_GPA; 
 	}
 
 	string getTel() { 
-		return _tel; 
+		return this->_tel;
 	}
 
 	string getEmail() { 
-		return _email; 
+		return this->_email;
 	}
 
 	date getDOB() { 
-		return _DOB; 
+		return this->_DOB;
 	}
 
 	string getAddress() { 
-		return _address; 
+		return this->_address;
 	}
 	
 	void setId(string id) { 
-		_id = id; 
+		this->_id = id;
 	}
 
 	void setName(Fullname name) { 
-		_name = name; 
+		this->_name = name;
 	}
 
 	void setGPA(double GPA) { 
-		_GPA = GPA; 
+		this->_GPA = GPA;
+	}
+
+	void setTel(string tel) { 
+		this->_tel = tel;
 	}
