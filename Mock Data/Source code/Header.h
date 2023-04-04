@@ -280,3 +280,6 @@ public:
 };
 
 class FakeId {
+private:
+	RandomIntegerGenerator _rng;
+};
