@@ -184,3 +184,7 @@ public:
 		return _id; 
 	}
 
+	Fullname name() { 
+		return _name; 
+	}
+
