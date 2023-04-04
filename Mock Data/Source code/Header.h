@@ -251,4 +251,6 @@ public:
 		return _S; 
 	}
 
+	~readStudent() { };
+
 };
