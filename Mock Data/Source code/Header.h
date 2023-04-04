@@ -161,4 +161,22 @@ private:
 	string _email;
 	date _DOB;
 	string _address;
+public:
+	Student() {
+		_id = "";
+		_GPA = 0;
+		_tel = "";
+		_email = "";
+		_address = "";
+	}
+
+	Student(string id, Fullname name, double GPA, string tel, string email, date DOB, string address) {
+		_id = id;
+		_name = name;
+		_GPA = GPA;
+		_tel = tel;
+		_email = email;
+		_DOB = DOB;
+		_address = address;
+	}
 
