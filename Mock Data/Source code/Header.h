@@ -152,3 +152,13 @@ public:
 	string toString();
 };
 
+class Student {
+private:
+	string _id;
+	Fullname _name;
+	double _GPA;
+	string _tel;
+	string _email;
+	date _DOB;
+	string _address;
+
