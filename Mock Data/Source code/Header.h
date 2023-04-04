@@ -223,3 +223,7 @@ public:
 	void setTel(string tel) { 
 		this->_tel = tel;
 	}
+
+	void setEmail(string Email) { 
+		this->_email = Email; 
+	}
