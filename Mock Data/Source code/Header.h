@@ -191,3 +191,7 @@ public:
 	double GPA() { 
 		return _GPA; 
 	}
+
+	string tel() { 
+		return _tel; 
+	}
