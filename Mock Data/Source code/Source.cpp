@@ -10,6 +10,7 @@
 
 using namespace std;
 
+// class RandomIntegerGenerator
 int RandomIntegerGenerator::next() {
 	int result = rand();
 	return result;
@@ -18,4 +19,20 @@ int RandomIntegerGenerator::next() {
 int RandomIntegerGenerator::next(int ceiling) {
 	int result = rand() % ceiling;
 	return result;
+}
+
+int RandomIntegerGenerator::next(int left, int right) {
+	int result = rand() % (right - left + 1) + left;
+	return result;
+}
+
+// class Number 
+unsigned long Number::RandomInteger(long left, long right) {
+	unsigned long x = rand() & 0xff;
+	//	khoang cach giua mot dong la 8 bit
+	x |= (rand() & 0xff) << 8;
+	x |= (rand() & 0xff) << 16;
+	x |= (rand() & 0xff) << 24;
+	unsigned long a = x % (right - left + 1) + left;
+	return a;
 }
