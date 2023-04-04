@@ -163,20 +163,24 @@ private:
 	string _address;
 public:
 	Student() {
-		_id = "";
-		_GPA = 0;
-		_tel = "";
-		_email = "";
-		_address = "";
+		this->_id = "";
+		this->_GPA = 0;
+		this->_tel = "";
+		this->_email = "";
+		this->_address = "";
 	}
 
 	Student(string id, Fullname name, double GPA, string tel, string email, date DOB, string address) {
-		_id = id;
-		_name = name;
-		_GPA = GPA;
-		_tel = tel;
-		_email = email;
-		_DOB = DOB;
-		_address = address;
+		this->_id = id;
+		this->_name = name;
+		this->_GPA = GPA;
+		this->_tel = tel;
+		this->_email = email;
+		this->_DOB = DOB;
+		this->_address = address;
+	}
+
+	string id() { 
+		return _id; 
 	}
 
