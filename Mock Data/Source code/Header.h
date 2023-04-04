@@ -278,3 +278,5 @@ class FakeInterger {
 public:
 	int rand();
 };
+
+class FakeId {
