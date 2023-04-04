@@ -227,3 +227,7 @@ public:
 	void setEmail(string Email) { 
 		this->_email = Email; 
 	}
+
+	void setDOB(date DOB) { 
+		_DOB = DOB; 
+	}
