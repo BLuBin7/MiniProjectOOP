@@ -267,4 +267,6 @@ public:
 	Fullname next();
 };
 
+class FakeGPA {
+
 };
