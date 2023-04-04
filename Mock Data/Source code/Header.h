@@ -282,4 +282,7 @@ public:
 class FakeId {
 private:
 	RandomIntegerGenerator _rng;
+public:
+	string rand_id(int, int);
 };
+
