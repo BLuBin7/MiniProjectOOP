@@ -195,3 +195,7 @@ public:
 	string tel() { 
 		return _tel; 
 	}
+
+	string email() { 
+		return _email; 
+	}
