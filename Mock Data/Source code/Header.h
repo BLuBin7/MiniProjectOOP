@@ -256,5 +256,6 @@ public:
 
 
 class FakeFullnameGenerator {
-
+private:
+	vector<string> _CommonlastNames;
 };
