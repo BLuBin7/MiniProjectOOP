@@ -262,4 +262,9 @@ private:
 	vector<string> _middleNames;
 	vector<string> _lastNames;
 	RandomIntegerGenerator _rng;
+public:
+	FakeFullnameGenerator();
+	Fullname next();
+};
+
 };
