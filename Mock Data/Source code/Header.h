@@ -199,3 +199,7 @@ public:
 	string email() { 
 		return _email; 
 	}
+
+	date DOB() { 
+		return _DOB; 
+	}
