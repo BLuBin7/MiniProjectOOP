@@ -188,3 +188,6 @@ public:
 		return _name; 
 	}
 
+	double GPA() { 
+		return _GPA; 
+	}
