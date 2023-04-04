@@ -237,3 +237,4 @@ public:
 	}
 
 	string toStringFull();
+	string toStringShort();
