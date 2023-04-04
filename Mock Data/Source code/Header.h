@@ -246,4 +246,9 @@ private:
 	Student _S;
 public:
 	readStudent(fstream&, int&);
+
+	Student getS() { 
+		return _S; 
+	}
+
 };
