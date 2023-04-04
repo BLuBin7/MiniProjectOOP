@@ -231,3 +231,9 @@ public:
 	void setDOB(date DOB) { 
 		_DOB = DOB; 
 	}
+
+	void setAddress(string add) { 
+		this->_address = add; 
+	}
+
+	string toStringFull();
