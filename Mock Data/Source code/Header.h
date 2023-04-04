@@ -242,3 +242,6 @@ public:
 };
 
 class readStudent {
+private:
+	Student _S;
+};
