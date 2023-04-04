@@ -180,34 +180,34 @@ public:
 		this->_address = address;
 	}
 
-	string id() { 
+	string getId() { 
 		return _id; 
 	}
 
-	Fullname name() { 
+	Fullname getName() { 
 		return _name; 
 	}
 
-	double GPA() { 
+	double getGPA() { 
 		return _GPA; 
 	}
 
-	string tel() { 
+	string getTel() { 
 		return _tel; 
 	}
 
-	string email() { 
+	string getEmail() { 
 		return _email; 
 	}
 
-	date DOB() { 
+	date getDOB() { 
 		return _DOB; 
 	}
 
-	string address() { 
+	string getAddress() { 
 		return _address; 
 	}
 	
-	void setid(string id) { 
+	void setId(string id) { 
 		_id = id; 
 	}
