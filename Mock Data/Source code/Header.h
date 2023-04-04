@@ -215,3 +215,7 @@ public:
 	void setName(Fullname name) { 
 		_name = name; 
 	}
+
+	void setGPA(double GPA) { 
+		_GPA = GPA; 
+	}
