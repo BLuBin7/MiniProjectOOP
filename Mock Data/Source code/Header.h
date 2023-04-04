@@ -240,3 +240,5 @@ public:
 	string toStringShort();
 	~Student() {};
 };
+
+class readStudent {
