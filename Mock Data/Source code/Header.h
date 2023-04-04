@@ -252,5 +252,9 @@ public:
 	}
 
 	~readStudent() { };
+};
+
+
+class FakeFullnameGenerator {
 
 };
