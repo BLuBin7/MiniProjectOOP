@@ -180,61 +180,63 @@ public:
 		this->_address = address;
 	}
 
-	string getId() { 
-		return _id; 
+	string getId() {
+		return _id;
 	}
 
-	Fullname getName() { 
-		return _name; 
+	Fullname getName() {
+		return _name;
 	}
 
-	double getGPA() { 
-		return this->_GPA; 
+	double getGPA() {
+		return this->_GPA;
 	}
 
-	string getTel() { 
+	string getTel() {
 		return this->_tel;
 	}
 
-	string getEmail() { 
+	string getEmail() {
 		return this->_email;
 	}
 
-	date getDOB() { 
+	date getDOB() {
 		return this->_DOB;
 	}
 
-	string getAddress() { 
+	string getAddress() {
 		return this->_address;
 	}
-	
-	void setId(string id) { 
+
+	void setId(string id) {
 		this->_id = id;
 	}
 
-	void setName(Fullname name) { 
+	void setName(Fullname name) {
 		this->_name = name;
 	}
 
-	void setGPA(double GPA) { 
+	void setGPA(double GPA) {
 		this->_GPA = GPA;
 	}
 
-	void setTel(string tel) { 
+	void setTel(string tel) {
 		this->_tel = tel;
 	}
 
-	void setEmail(string Email) { 
-		this->_email = Email; 
+	void setEmail(string Email) {
+		this->_email = Email;
 	}
 
-	void setDOB(date DOB) { 
-		_DOB = DOB; 
+	void setDOB(date DOB) {
+		_DOB = DOB;
 	}
 
-	void setAddress(string add) { 
-		this->_address = add; 
+	void setAddress(string add) {
+		this->_address = add;
 	}
 
 	string toStringFull();
 	string toStringShort();
+	~Student() {};
+};
