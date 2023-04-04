@@ -268,5 +268,6 @@ public:
 };
 
 class FakeGPA {
-
+private:
+	RandomIntegerGenerator _rng;
 };
