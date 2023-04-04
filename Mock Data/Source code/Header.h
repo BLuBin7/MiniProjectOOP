@@ -273,3 +273,8 @@ private:
 public:
 	double rand_gpa();
 };
+
+class FakeInterger {
+public:
+	int rand();
+};
