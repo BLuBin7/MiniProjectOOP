@@ -211,3 +211,7 @@ public:
 	void setId(string id) { 
 		_id = id; 
 	}
+
+	void setName(Fullname name) { 
+		_name = name; 
+	}
