@@ -203,3 +203,7 @@ public:
 	date DOB() { 
 		return _DOB; 
 	}
+
+	string address() { 
+		return _address; 
+	}
