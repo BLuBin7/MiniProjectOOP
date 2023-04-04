@@ -207,3 +207,7 @@ public:
 	string address() { 
 		return _address; 
 	}
+	
+	void setid(string id) { 
+		_id = id; 
+	}
