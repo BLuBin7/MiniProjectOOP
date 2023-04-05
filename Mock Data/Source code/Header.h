@@ -321,5 +321,8 @@ class FakeAddress {
 private:
 	vector<vector<string>> _Data;
 	Number _rng;
+public:
+	FakeAddress();
+	string next();
 };
 
