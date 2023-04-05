@@ -330,5 +330,9 @@ class RandomStudent {
 private:
 	Student _S;
 	RandomIntegerGenerator _rng;
+public:
+	RandomStudent(int);
+	Student info() { return _S; }
+	~RandomStudent() {}
 };
 
