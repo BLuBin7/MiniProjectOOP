@@ -286,3 +286,6 @@ public:
 	string rand_id(int, int);
 };
 
+class FakeEmail {
+};
+
