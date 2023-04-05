@@ -290,5 +290,8 @@ class FakeEmail {
 private:
 	vector<string> _domain;
 	Number _rng;
+public:
+	FakeEmail();
+	string next(string);
 };
 
