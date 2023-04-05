@@ -296,5 +296,11 @@ public:
 };
 
 class FakeTel {
+private:
+	vector<string> mb;
+	vector<string> vt;
+	vector<string> vn;
+	vector<string> vnmb;
+	RandomIntegerGenerator _rng;
 };
 
