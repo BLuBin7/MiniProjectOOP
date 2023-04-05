@@ -287,5 +287,8 @@ public:
 };
 
 class FakeEmail {
+private:
+	vector<string> _domain;
+	Number _rng;
 };
 
