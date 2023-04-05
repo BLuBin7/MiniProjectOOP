@@ -326,3 +326,7 @@ public:
 	string next();
 };
 
+class RandomStudent {
+
+};
+
