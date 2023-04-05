@@ -312,5 +312,8 @@ private:
 	time_t _start;
 	time_t _end;
 	Number _rng;
+public:
+	FakeBirthday();
+	date next();
 };
 
