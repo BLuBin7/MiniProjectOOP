@@ -295,3 +295,6 @@ public:
 	string next(string);
 };
 
+class FakeTel {
+};
+
