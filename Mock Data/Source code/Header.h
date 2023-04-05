@@ -327,6 +327,8 @@ public:
 };
 
 class RandomStudent {
-
+private:
+	Student _S;
+	RandomIntegerGenerator _rng;
 };
 
