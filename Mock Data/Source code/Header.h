@@ -340,5 +340,14 @@ class vectorStudent {
 private:
 	vector<Student> _VS;
 	RandomIntegerGenerator _rng;
+public:
+	vectorStudent(string);
+	void RandomListStudent();
+	void infoList();
+	void saveList(string);
+	double averageGPA();
+	void StudentMoreAveGPA();
+	vector<Student> getVS() { return _VS; }
+	~vectorStudent() { };
 };
 
