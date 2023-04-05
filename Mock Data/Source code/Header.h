@@ -336,3 +336,6 @@ public:
 	~RandomStudent() {}
 };
 
+class vectorStudent {
+};
+
