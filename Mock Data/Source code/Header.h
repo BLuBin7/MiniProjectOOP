@@ -302,5 +302,8 @@ private:
 	vector<string> vn;
 	vector<string> vnmb;
 	RandomIntegerGenerator _rng;
+public:
+	FakeTel();
+	string rand_tel();
 };
 
