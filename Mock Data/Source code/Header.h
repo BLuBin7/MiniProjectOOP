@@ -337,5 +337,8 @@ public:
 };
 
 class vectorStudent {
+private:
+	vector<Student> _VS;
+	RandomIntegerGenerator _rng;
 };
 
