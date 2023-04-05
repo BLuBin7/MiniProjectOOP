@@ -307,3 +307,6 @@ public:
 	string rand_tel();
 };
 
+class FakeBirthday {
+};
+
