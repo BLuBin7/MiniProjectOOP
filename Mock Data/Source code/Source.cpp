@@ -67,3 +67,7 @@ string date::toString() {
 readStudent::readStudent(fstream& f, int& pos) {
 	f.seekg(pos, ios::beg);
 	string s1, s2, s3, s4; char c[256]; double d; int i, j, k;
+
+	//Set id
+	f.seekg(9, ios_base::cur); //"Student " co 9 ky tu
+	f.getline(c, 256, '-');
