@@ -74,3 +74,8 @@ readStudent::readStudent(fstream& f, int& pos) {
 	s1 = string(c);
 	s1.erase(prev(s1.end())); //Xoa dau cach
 	_S.setid(s1);
+
+	//Set Name
+	f.seekg(1, ios_base::cur); //Nhay 1 dau cach
+	f.getline(c, 256, '\n');
+	s1 = string(c);
