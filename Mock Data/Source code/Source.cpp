@@ -55,3 +55,11 @@ string Student::toStringShort() {
 	string s = ss.str();
 	return s;
 }
+
+string date::toString() {
+	stringstream ss;
+	ss.fill('0');
+	ss << setw(2) << _day << '/' << setw(2) << _month << '/' << setw(4) << _year;
+	string s = ss.str();
+	return s;
+}
