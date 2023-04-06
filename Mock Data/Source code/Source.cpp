@@ -47,3 +47,11 @@ string Student::toStringFull() {
 	string s = ss.str();
 	return s;
 }
+
+string Student::toStringShort() {
+	stringstream ss;
+	ss << id() << " - " << name().toString();
+	ss << ", GPA: " << fixed << setprecision(2) << GPA() << endl;
+	string s = ss.str();
+	return s;
+}
