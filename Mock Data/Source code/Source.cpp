@@ -71,3 +71,6 @@ readStudent::readStudent(fstream& f, int& pos) {
 	//Set id
 	f.seekg(9, ios_base::cur); //"Student " co 9 ky tu
 	f.getline(c, 256, '-');
+	s1 = string(c);
+	s1.erase(prev(s1.end())); //Xoa dau cach
+	_S.setid(s1);
