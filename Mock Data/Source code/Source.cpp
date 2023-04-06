@@ -36,3 +36,14 @@ unsigned long Number::RandomInteger(long left, long right) {
 	unsigned long a = x % (right - left + 1) + left;
 	return a;
 }
+
+string Student::toStringFull() {
+	stringstream ss;
+	ss << "Student: " << id() << " - " << name().toString() << endl;
+	ss << "\tGPA=" << fixed << setprecision(2) << GPA() << ", " << "Telephone: " << tel() << endl;
+	ss << "\tEmail=" << email() << endl;
+	ss << "\tDOB=" << DOB().toString() << endl;
+	ss << "\tAddress=" << address() << endl;
+	string s = ss.str();
+	return s;
+}
