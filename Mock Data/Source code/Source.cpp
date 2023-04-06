@@ -64,3 +64,6 @@ string date::toString() {
 	return s;
 }
 
+readStudent::readStudent(fstream& f, int& pos) {
+	f.seekg(pos, ios::beg);
+	string s1, s2, s3, s4; char c[256]; double d; int i, j, k;
