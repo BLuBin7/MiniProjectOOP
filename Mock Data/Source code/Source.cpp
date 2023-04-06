@@ -82,3 +82,6 @@ readStudent::readStudent(fstream& f, int& pos) {
 	s2 = s1.substr(0, s1.find(' '));
 	s3 = s1.substr(s1.rfind(' ') + 1, s1.length() - s1.rfind(' ') - 1);
 	s4 = s1.substr(s1.find(' ') + 1, s1.rfind(' ') - s1.find(' ') - 1);
+	Fullname name(s3, s4, s2);
+	_S.setName(name);
+	pos = f.tellg();
