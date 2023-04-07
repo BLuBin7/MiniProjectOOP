@@ -99,3 +99,14 @@ readStudent::readStudent(fstream& f, int& pos) {
 	f.getline(c, 256, '\n');
 	s1 = string(c); _S.setEmail(s1);
 
+	//Set DOB
+	f.seekg(8, ios_base::cur);
+	f.getline(c, 3, '/');
+	i = atoi(c);  //Set Day
+	f.getline(c, 3, '/');
+	j = atoi(c); //Set Month
+	f.getline(c, 5, '\n');
+	k = atoi(c); //Set Year
+	date DOB(i, j, k);
+	_S.setDOB(DOB);
+
