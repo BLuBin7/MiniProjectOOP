@@ -90,4 +90,12 @@ readStudent::readStudent(fstream& f, int& pos) {
 	f.seekg(8, ios_base::cur);
 	f.getline(c, 256, ',');
 	d = atof(c); _S.setGPA(d);
+	//Set Tel
+	f.seekg(11, ios_base::cur);
+	f.getline(c, 256, '\n');
+	s1 = string(c); _S.setTel(s1);
+	//Set Email
+	f.seekg(10, ios_base::cur);
+	f.getline(c, 256, '\n');
+	s1 = string(c); _S.setEmail(s1);
 
