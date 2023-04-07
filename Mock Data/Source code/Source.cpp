@@ -87,6 +87,7 @@ readStudent::readStudent(fstream& f, int& pos) {
 	pos = f.tellg();
 
 	//Set GPA
-	f.seekg(8, ios_base::cur);//"    GPA=" co 8 ky tu
+	f.seekg(8, ios_base::cur);
 	f.getline(c, 256, ',');
 	d = atof(c); _S.setGPA(d);
+
