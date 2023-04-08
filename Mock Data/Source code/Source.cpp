@@ -156,4 +156,16 @@ FakeFullnameGenerator::FakeFullnameGenerator() {
 }
 
 Fullname FakeFullnameGenerator::next() {
+	int a = _rng.next(90);
+	int b1 = _rng.next(9);
+	double b = (double)((double)b1 / 10);
+
+	string last = "";
+	double random = ((double)rand()) / RAND_MAX;
+	double ab = 100 * random;
+	if (ab > 0 && ab <= 38.4) {
+		last = _CommonlastNames[0];
+	}
+
+
 }
