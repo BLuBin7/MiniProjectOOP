@@ -129,4 +129,17 @@ FakeFullnameGenerator::FakeFullnameGenerator() {
 		//nn++;
 		_lastNames.push_back(Ho_phu);
 	}
+
+	of.close();
+	//nn--;
+
+	fstream oof;
+	string lot;
+	oof.open("Tenlot.txt");
+	//int nn = 1;
+	while (oof >> lot) {//////////// Doc file ten lot
+		//nn++;
+		_middleNames.push_back(lot);
+	}
+	oof.close();
 }
