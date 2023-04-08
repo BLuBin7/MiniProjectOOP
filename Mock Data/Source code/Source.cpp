@@ -109,9 +109,14 @@ readStudent::readStudent(fstream& f, int& pos) {
 	k = atoi(c); //Set Year
 	date DOB(i, j, k);
 	_S.setDOB(DOB);
+
 	//Set Address
 	f.seekg(12, ios_base::cur);
 	f.getline(c, 256, '\n');
 	s1 = string(c); _S.setAddress(s1);
 	pos = f.tellg();
+
+}
+
+FakeFullnameGenerator::FakeFullnameGenerator() {
 }
