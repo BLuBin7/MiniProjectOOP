@@ -142,4 +142,15 @@ FakeFullnameGenerator::FakeFullnameGenerator() {
 		_middleNames.push_back(lot);
 	}
 	oof.close();
+
+	fstream ff;
+	string name;
+	ff.open("Ten.txt");
+	//nn = 1;
+	while (ff >> name) {//////////// Doc file ten
+		_firstNames.push_back(name);
+		//nn++;
+	}
+	ff.close();
+	//nn--;
 }
