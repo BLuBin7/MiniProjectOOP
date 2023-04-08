@@ -119,4 +119,14 @@ readStudent::readStudent(fstream& f, int& pos) {
 }
 
 FakeFullnameGenerator::FakeFullnameGenerator() {
+	_CommonlastNames = { "Nguyen", "Le", "Bui", "Pham", "Vu", "Vo", "Hoang", "Huynh", "Do", "Phan", "Dang", "Tran", "Ho", "Ngo", "Duong", "Ly" };//Ho
+
+	fstream of;
+	string Ho_phu;
+	of.open("Ho.txt");
+	//int nn = 1;
+	while (of >> Ho_phu) {//////////// Doc file ho pho bien
+		//nn++;
+		_lastNames.push_back(Ho_phu);
+	}
 }
