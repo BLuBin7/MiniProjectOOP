@@ -167,5 +167,11 @@ Fullname FakeFullnameGenerator::next() {
 		last = _CommonlastNames[0];
 	}
 
+	else if (ab <= 48.7) {
+		last = _CommonlastNames[1];
+	}
 
+	else if (ab <= 56.9) {
+		last = _CommonlastNames[2];
+	}
 }
