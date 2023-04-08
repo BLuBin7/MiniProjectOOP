@@ -154,3 +154,6 @@ FakeFullnameGenerator::FakeFullnameGenerator() {
 	ff.close();
 	//nn--;
 }
+
+Fullname FakeFullnameGenerator::next() {
+}
