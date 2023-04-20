@@ -86,6 +86,7 @@ public:
 class Library {
 private:
 	string name;
+
 	vector<Book*> stock;
 
 	vector<BorrowerRecord*> borrower;
@@ -101,6 +102,7 @@ public:
 	Library(string name) {
 		this->setName(name);
 	}
+
 
 	void setName(string value) {
 		this->name = value;
@@ -138,11 +140,15 @@ public:
 			stock[i]->display();
 		}
 	}
+
+	//6 return one book
+	void returnOneBook(string number);
 };
 
 class BorrowerRecord {
 private:
 	string theName;
+	string aCatalogNumber;
 	vector<Book*> thebook;
 public:
 	BorrowerRecord(string name) {
@@ -159,6 +165,14 @@ public:
 		this->theName = value;
 	}
 
+	string getaCatalogNumber() {
+		return this->aCatalogNumber;
+	}
+
+	void setaCatalogNumber(string value) {
+		this->aCatalogNumber = value;
+	}
+
 
 
 	void display() {
@@ -168,8 +182,15 @@ public:
 
 
 	// add moi lien ket voi Book
-	void attackbook(Book abook);
-	// xoa moi lien ket voi Book
-	void detack(Book abook);
+	void attackbook(Book *abook) {
+		thebook.push_back(abook);
+	}
+
+	// delete moi lien ket voi Book
+	void detack(Book* abook) {
+		for (int i = 0; i < thebook.size();i++ ) {
+			
+		}
+	}
 
 };

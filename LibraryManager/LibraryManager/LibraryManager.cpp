@@ -56,7 +56,6 @@ void Library::displayBookOnLoan() {
 }
 
 //5. Lend one book
-	// tim ma sach va tim ng muon sach
 void Library:: lendOneBook(string number, string name) {
 	for (BorrowerRecord* br : this->borrower) {
 		// TH1 : đã đăng kí
@@ -98,6 +97,18 @@ void Library:: lendOneBook(string number, string name) {
 		}
 		else {
 			cout << "Error , because no one has registered with this name" << endl;
+		}
+	}
+}
+
+
+
+void Library::returnOneBook(string number) {
+	string name = this->getName();
+	for (int i = 0; i < borrower.size(); i++) {
+		if (borrower[i]->getaCatalogNumber() == number ||
+			this->registerOneBook(name) == borrower[i]->getaCatalogNumber()) {
+			borrower.erase(borrower.begin() + i);
 		}
 	}
 }
