@@ -1,5 +1,6 @@
 #pragma once
 #include<iostream>
+#include<vector>
 using namespace std;
 class Student {
 private:
@@ -64,7 +65,7 @@ class Course {
 private:
 	string name;
 	string id;
-
+	vector<Course> studentArchives;
 public:
 	Course(string name, string id): name(name), id(id){}
 	string getName() {
