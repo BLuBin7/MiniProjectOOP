@@ -48,7 +48,7 @@ int main() {
 			course->displayStudentRegister();
 		}
 		if (choice == 4) {
-
+			Course *cr = new Course();
 		}
 	} while (choice != 0);
 }

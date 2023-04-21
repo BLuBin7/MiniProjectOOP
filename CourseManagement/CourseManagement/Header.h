@@ -10,7 +10,7 @@ private:
 public:
 	Student(string name, string id) : name(name), id(id){}
 	
-	string getName() {
+	string getName() const {
 		return this->name;
 	}
 
@@ -18,7 +18,7 @@ public:
 		this->name = value;
 	}
 
-	string getId() {
+	string getId() const {
 		return this->id;
 	}
 
@@ -69,9 +69,10 @@ private:
 	string id;
 	vector<Student> listofstudent;
 	vector<Course> courseArchives;
+	vector<pair<Course,vector<Student>>> allStudentinCourse ;
 public:
 	Course(string name, string id): name(name), id(id){}
-	string getName() {
+	string getName() const {
 		return this->name;
 	}
 
@@ -87,7 +88,8 @@ public:
 		this->name = value;
 	}
 
-	string getId() {
+	// dat const de thuc thi duoc ostream dung lenh "const"
+	string getId() const {
 		return this->id;
 	}
 
@@ -112,4 +114,29 @@ public:
 	
 	void displayCourse();
 	void displayStudentRegister();
+
+	friend ostream& operator << (ostream& os, const Course& course)
+	{
+		os << "Course: " << course.getName() << ", " << course.getId() << std::endl;
+		return os;
+	}
+
+	friend ostream& operator << (ostream& os, const Student& student)
+	{
+		os << "Student: " << student.getName() << ", ID: " << student.getId() << std::endl;
+		return os;
+	}
+
+	friend ostream& operator << (ostream& os, const std::vector<std::pair<Course, std::vector<Student>>>& courses) {
+		for (const auto& course : courses)
+		{
+			os << course.first << "Students: " << std::endl;
+			for (const auto& student : course.second)
+			{
+				os << "\t" << &student;
+			}
+			os << std::endl;
+		}
+		return os;
+	}
 };
