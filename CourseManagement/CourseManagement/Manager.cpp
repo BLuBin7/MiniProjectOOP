@@ -20,7 +20,6 @@ void Course::RegisterofStudent(Student* student, string nameSubject) {
     }
     cout << "Error: Course not found." << std::endl;
 }
-//vector<pair<Course, vector<Student>>> allStudentinCourse;
 
 void Course::displayCourse() {
 	for (int i = 0; i < courseArchives.size(); i++) {
@@ -31,7 +30,21 @@ void Course::displayCourse() {
 }
 
 
+//void Course::displayStudentRegister() {
+//    for (auto& pair : allStudentinCourse) { // iterate over the pairs of (course, students) in the course
+//        cout << "Course: " << pair.first.getName() << ", " << pair.first.getId() << endl;
+//        cout << "Students: " << std::endl;
+//        for (auto& student : pair.second) { // iterate over the students in the pair
+//            cout << "\t" << student.getName() << ", ID: " << student.getId() << endl;
+//        }
+//        cout << endl;
+//    }
+//}
+
 void Course::displayStudentRegister() {
+
+    cout << allStudentinCourse;
+
     for (auto& pair : allStudentinCourse) { // iterate over the pairs of (course, students) in the course
         cout << "Course: " << pair.first.getName() << ", " << pair.first.getId() << endl;
         cout << "Students: " << std::endl;
@@ -41,6 +54,7 @@ void Course::displayStudentRegister() {
         cout << endl;
     }
 }
+
 
 
 
