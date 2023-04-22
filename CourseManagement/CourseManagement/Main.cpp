@@ -7,8 +7,8 @@ static void displayChoice() {
 	cout << "1. Tao mot hoc ki." << endl;
 	cout << "2. Them cac mon hoc vao hoc ki" << endl;
 	cout << "3. Dang ki mon hoc " << endl;
-	cout << "4. In ra danh sach sinh vien cua hoc ki" << endl;
-	cout << "5. In ra danh sach cac mon trong hoc ki" << endl;
+	cout << "4. In tong so luong cac mon va danh sach sinh vien dang ki" << endl;
+	cout << "5. In ra danh sach cac mon dang mo trong hoc ki" << endl;
 	cout << "Nhap lua chon : " << endl;
 }
 int main() {
@@ -50,7 +50,7 @@ int main() {
 			
 		}
 		if (choice == 4) {
-			Course *cr = new Course();
+			course->displayStudentRegister();
 		}
 		if (choice == 5) {
 			course->displayCourse();
