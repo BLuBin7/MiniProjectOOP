@@ -44,7 +44,7 @@ void Course::displayCourse() {
 void Course::displayStudentRegister() {
 
     cout << allStudentinCourse;
-
+    
     for (auto& pair : allStudentinCourse) { // iterate over the pairs of (course, students) in the course
         cout << "Course: " << pair.first.getName() << ", " << pair.first.getId() << endl;
         cout << "Students: " << std::endl;
