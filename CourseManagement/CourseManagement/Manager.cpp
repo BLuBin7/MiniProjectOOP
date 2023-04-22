@@ -11,7 +11,7 @@ void Course::addCourse(string name, string id){
 
 //3 . 
 void Course::RegisterofStudent(Student* student, string nameSubject) {
-    for (Course& cr : courseArchives) { 
+    for (auto& cr : courseArchives) { 
         if (cr.getName() == nameSubject) { 
             cr.listofstudent.push_back(*student); 
             cr.allStudentinCourse.push_back(make_pair(cr, cr.listofstudent));
@@ -43,9 +43,12 @@ void Course::displayCourse() {
 
 void Course::displayStudentRegister() {
 
-    cout << allStudentinCourse;
-    
+    //cout << allStudentinCourse;
+    cout << "step 1"<<endl;
+    std::cout << "Number of courses with students: " << allStudentinCourse.size() << std::endl;
+
     for (auto& pair : allStudentinCourse) { // iterate over the pairs of (course, students) in the course
+        cout << "step 2"<<endl;
         cout << "Course: " << pair.first.getName() << ", " << pair.first.getId() << endl;
         cout << "Students: " << std::endl;
         for (auto& student : pair.second) { // iterate over the students in the pair
