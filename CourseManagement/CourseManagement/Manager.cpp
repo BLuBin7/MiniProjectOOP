@@ -52,17 +52,6 @@ void Course::displayCourse() {
 }
 
 
-//void Course::displayStudentRegister() {
-//    for (auto& pair : allStudentinCourse) { // iterate over the pairs of (course, students) in the course
-//        cout << "Course: " << pair.first.getName() << ", " << pair.first.getId() << endl;
-//        cout << "Students: " << std::endl;
-//        for (auto& student : pair.second) { // iterate over the students in the pair
-//            cout << "\t" << student.getName() << ", ID: " << student.getId() << endl;
-//        }
-//        cout << endl;
-//    }
-//}
-
 void Course::displayStudentRegister() {
 
     if (allStudentinCourse.empty()) {
