@@ -27,6 +27,7 @@ int main() {
 	// // b2 la con tro nen khong can truyen gi het
 	lib->addOneBook(b2);
 	lib->addOneBook(b3);
+	lib->displayAvailable();
 
 	// test #2 
 	cout << "Nhap ten nguoi dang ki : " << endl;
@@ -35,7 +36,7 @@ int main() {
 	lib->registerOneBook(name);
 	//lib->display();
 	// test #3 
-	// lib->displayAvailable();
+	 //lib->displayAvailable();
 	// test #4
 	// test #5
 

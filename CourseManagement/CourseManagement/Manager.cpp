@@ -82,8 +82,6 @@ void Course::displayStudentRegister() {
 
 
 
-
-
 //ostream& operator << (ostream& os, const Course& course)
 //{
 //	os << "Course: " << course.getName() << ", " << course.getId() << std::endl;

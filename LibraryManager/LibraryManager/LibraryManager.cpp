@@ -70,6 +70,7 @@ void Library:: lendOneBook(string number, string name) {
 				count++;
 				// it là con trỏ nên khai báo cần có " *it "
 				if ((*it)->getNumber() == number) {
+					// xoa sach trong stock
 					stock.erase(stock.begin() + count - 1);
 					// Must include a break here
 					cout << "Borrowed successfully: "
