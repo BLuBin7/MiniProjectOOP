@@ -83,3 +83,18 @@ Ma tai khoan nhan tien: 2
 So tien chuyen khoan: 1000
 Thoi gian: Wed May 24 20:45:02 2023
 
+Ma tai khoan gui tien: 1
+Ma tai khoan nhan tien: 2
+So tien chuyen khoan: 1000
+Thoi gian: Wed May 24 20:52:19 2023
+
+Ma tai khoan gui tien: 1
+Ma tai khoan nhan tien: 2
+So tien chuyen khoan: 1000
+Thoi gian: Wed May 24 20:54:48 2023
+
+Ma tai khoan gui tien: 1
+Ma tai khoan nhan tien: 2
+So tien chuyen khoan: 1000
+Thoi gian: Wed May 24 20:55:05 2023
+

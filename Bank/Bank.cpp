@@ -189,10 +189,10 @@ class TaiKhoanTietKiem : public TaiKhoan {
         }
 
         // write file
-        void guiTienTietKiem(double soTien) {
+        void lichsuguiTienTietKiem(double soTien) {
             TaiKhoanTietKiem* taiKhoanTietKiem = nullptr;
             
-            ofstream file("tietkiem.txt", ios::app); 
+            ofstream file("lichsutietkiem.txt", ios::app); 
             if (file.is_open()) {
                 file << "Loai giao dich: Gui tien" << endl;
                 file << "Ma tai khoan: " << maTaiKhoan << endl;
@@ -279,7 +279,7 @@ class TaiKhoanVayMuon : public TaiKhoan {
         }
 
         // write file
-        void Vay(double soTien) {
+        void lichsuVay(double soTien) {
             TaiKhoanVayMuon *TaiKhoanVayMuon = nullptr;
             soDu += soTien;
             soTienVay += soTien;
@@ -287,7 +287,7 @@ class TaiKhoanVayMuon : public TaiKhoan {
             timeVayTien();
 
 
-            ofstream file("vay.txt", ios::app); 
+            ofstream file("lichsuvay.txt", ios::app); 
             if (file.is_open()) {
                 file <<"So tien da vay: " << soTienVay << endl;
                 file <<"So tien dong hang thang: " << soTienDongHangThang << endl;
@@ -412,7 +412,7 @@ public:
             cout << "Khong tim thay tai khoan!" << endl;
         }
 
-        ofstream file("chuyenkhoan.txt", ios::app); 
+        ofstream file("lichsuchuyenkhoan.txt", ios::app); 
 
         if (file.is_open()) {
             file << "Ma tai khoan gui tien: " << maTaiKhoanGuiTien << endl;
@@ -489,8 +489,8 @@ int main() {
 
 
     //save file
-    tk4->Vay(2000);
-    tk3->guiTienTietKiem(200);
+    tk4->lichsuVay(2000);
+    tk3->lichsuguiTienTietKiem(200);
 
     
 
