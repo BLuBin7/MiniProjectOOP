@@ -132,6 +132,11 @@
   <ItemGroup>
     <Image Include="..\..\..\..\Users\Binh\Desktop\Screenshot 2023-06-02 223117.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Date.h" />
+    <ClInclude Include="Role.h" />
+    <ClInclude Include="User.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
