@@ -134,6 +134,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Date.h" />
+    <ClInclude Include="Permission.h" />
     <ClInclude Include="Role.h" />
     <ClInclude Include="User.h" />
   </ItemGroup>
