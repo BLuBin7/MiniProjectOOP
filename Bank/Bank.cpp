@@ -2,6 +2,7 @@
 #include <string>
 #include <vector>
 #include <fstream>
+#include <iomanip>
 #include <ctime>
 
 using namespace std;
@@ -119,13 +120,13 @@ class TaiKhoanThanhToan : public TaiKhoan {
         double getPhi(){
             return this->phi;
         }
-
         void setPhi(double phi){
             this->phi = phi;
         }
         TaiKhoanThanhToan(string ma){
             this->maTaiKhoan = ma;
         }
+
         TaiKhoanThanhToan(string ma, string ten, double sodu, double phi) : TaiKhoan(ma, ten, sodu), phi(phi) {}
         void hienThiThongTin() override {
             cout << "Tai khoan thanh toan" << endl;
@@ -139,8 +140,8 @@ class TaiKhoanThanhToan : public TaiKhoan {
 class TaiKhoanTietKiem : public TaiKhoan {
     protected:
         double laiSuat;
-        string ngayDenHan;
         double soTienGui;
+        int kyHan;
     public:
         double getLaiSuat(){
             return this->laiSuat;
@@ -148,14 +149,6 @@ class TaiKhoanTietKiem : public TaiKhoan {
 
         void setLaiSuat(double laiSuat){
             this->laiSuat = laiSuat;
-        }
-
-        string getNgayDenHan(){
-            return this->ngayDenHan;
-        }
-
-        void setNgayDenHan(string ngayDenHan){
-            this->ngayDenHan = ngayDenHan;
         }
 
         double getSoTienGui(){
@@ -168,31 +161,33 @@ class TaiKhoanTietKiem : public TaiKhoan {
         TaiKhoanTietKiem(string ma){
             this->maTaiKhoan = ma;
         }
-        TaiKhoanTietKiem(string ma, string ten, int sodu, double laiSuat, string ngayDenHan, double soTienGui) : TaiKhoan(ma, ten, sodu), laiSuat(laiSuat), ngayDenHan(ngayDenHan), soTienGui(soTienGui) {}
+        TaiKhoanTietKiem(string ma, string ten, double sodu, double soTienGui, double laiSuat,int kyHan) : TaiKhoan(ma, ten, sodu), soTienGui(soTienGui),laiSuat(laiSuat),kyHan(kyHan) {}
         // phương thức hiển thị thông tin tài khoản
         void hienThiThongTin() override {
             cout << "Tai khoan tiet kiem" << endl;
             TaiKhoan::hienThiThongTin();
             cout << "Lai suat: " << laiSuat << "%" << endl;
-            cout << "Ngay den han: " << ngayDenHan << endl;
+            cout << "Ngay den han: " ;
+            timeGuiTietKiem();
             cout << "So tien gui: " << soTienGui << endl;
         }
+        double sotienlai = soDu + soDu * laiSuat;
 
-        void guiTietKiem(double soTien) {
-            soDu += soTien;
-            soTienGui += soTien;
+        void guiTietKiem() {
+            soDu -= soTienGui;
             cout << "Giao dich gui tiet kiem thanh cong!" << endl;
             cout << "Ngay Den Han: " ;
             timeGuiTietKiem();
             cout << "So du hien tai: " << soDu << endl;
             cout << "So tien da gui: " << soTienGui << endl;
+            cout << "So tien lai sau " << kyHan <<" thang : "<<sotienlai<< endl;
         }
 
         // write file
-        void lichsuguiTienTietKiem(double soTien) {
+        void lichsuGuiTienTietKiem(double soTien) {
             TaiKhoanTietKiem* taiKhoanTietKiem = nullptr;
             
-            ofstream file("lichsutietkiem.txt", ios::app); 
+            ofstream file("lichsuguitietkiem.txt", ios::app); 
             if (file.is_open()) {
                 file << "Loai giao dich: Gui tien" << endl;
                 file << "Ma tai khoan: " << maTaiKhoan << endl;
@@ -219,8 +214,6 @@ class TaiKhoanVayMuon : public TaiKhoan {
     protected:
         double soTienVay;
         double laiSuat;
-        int kyHan;
-        double soTienDongHangThang;
     public:
         double getSoTienVay(){
             return this->soTienVay;
@@ -238,41 +231,27 @@ class TaiKhoanVayMuon : public TaiKhoan {
             this->laiSuat = laiSuat;
         }
 
-        int getKyHan(){
-            return this->kyHan;
-        }
-
-        void setKyHan(int kyHan){
-            this->kyHan = kyHan;
-        }
-
-        double getSoTienDongHangThang(){
-            return this->soTienDongHangThang;
-        }
-
-        void setSoTienDongHangThang(double soTienDongHangThang){
-            this->soTienDongHangThang = soTienDongHangThang;
-        }
-
         TaiKhoanVayMuon(string ma){
             this->maTaiKhoan = ma;
         }
-        TaiKhoanVayMuon(string ma, string ten, double sodu, double soTienVay, double laiSuat, int kyHan, double soTienDongHangThang) : TaiKhoan(ma, ten, sodu), soTienVay(soTienVay), laiSuat(laiSuat), kyHan(kyHan), soTienDongHangThang(soTienDongHangThang) {}
+        double soTienDongHangThang = 0;
+        TaiKhoanVayMuon(string ma, string ten, double sodu, double soTienVay, double laiSuat) : TaiKhoan(ma, ten, sodu), soTienVay(soTienVay), laiSuat(laiSuat) {}
         // phương thức hiển thị thông tin tài khoản
         void hienThiThongTin() override {
             cout << "Tai khoan vay muon" << endl;
             TaiKhoan::hienThiThongTin();
             cout << "So tien vay: " << soTienVay << endl;
             cout << "Lai suat: " << laiSuat << "%" << endl;
-            cout << "Ky han: " << kyHan << endl;
+            cout << "Ky han: " ;
+            timeVayTien();
             cout << "So tien dong hang thang: " << soTienDongHangThang << endl;
         }
 
-        // console
-        void VayTien(double soTien) {
-            soDu += soTien;
-            soTienVay += soTien;
+        // console                  
+        void VayTien() {               
+            soDu += soTienVay;
             cout<<"So tien da vay: " << soTienVay << endl;
+            soTienDongHangThang = soTienVay * laiSuat;
             cout<<"So tien dong hang thang: " << soTienDongHangThang << endl;
             cout<<"Ngay den han: ";
             timeVayTien();
@@ -311,23 +290,21 @@ class TaiKhoanVayMuon : public TaiKhoan {
 };
 
 // tài khoản cso thẻ tín dụng kế thừa lớp tài khoản thanh toán, tiết kiệm
-class TaiKhoanCoTheTinDung : public TaiKhoanThanhToan, public TaiKhoanTietKiem {
-    protected:
-        double laiSuat;
-    private:
-        double hanMucVay;
-        double soTienConLai;
+class TaiKhoanCoTheTinDung : public TaiKhoanThanhToan, public TaiKhoanTietKiem , public TaiKhoanVayMuon{
     public:
-        TaiKhoanCoTheTinDung(string ma): TaiKhoanThanhToan(ma), TaiKhoanTietKiem(ma), laiSuat(0), hanMucVay(0), soTienConLai(0) {}
+        // TaiKhoanCoTheTinDung(string ma): TaiKhoanThanhToan(ma), TaiKhoanTietKiem(ma),TaiKhoanVayMuon(ma), laiSuat(0), hanMucVay(0), soTienConLai(0) {}
         
-        TaiKhoanCoTheTinDung(string ma, string ten, double sodu, double hanMucVay, double soTienConLai, double laiSuat, double phi) : TaiKhoanThanhToan(ma, ten, sodu, phi), TaiKhoanTietKiem(ma, ten, sodu, laiSuat, "", 0), hanMucVay(hanMucVay), soTienConLai(soTienConLai) {}
+        TaiKhoanCoTheTinDung(string ma, string ten, double sodu, double phi) : TaiKhoanThanhToan(ma, ten, sodu, phi),TaiKhoanTietKiem(ma),TaiKhoanVayMuon(ma){}
         // phương thức hiển thị thông tin tài khoản
+        TaiKhoanCoTheTinDung(string ma, string ten, double sodu, double soTienGui, double laiSuat,int kyHan) : TaiKhoanTietKiem(ma, ten, sodu, soTienGui, laiSuat, kyHan),TaiKhoanThanhToan(ma),TaiKhoanVayMuon(ma){}
+        
+        TaiKhoanCoTheTinDung(string ma, string ten, double sodu, double soTienVay, double laiSuat) : TaiKhoanVayMuon(ma, ten, sodu,  soTienVay,  laiSuat),TaiKhoanThanhToan(ma),TaiKhoanTietKiem(ma){}
+        
         void hienThiThongTin() override {
             cout << "Tai khoan co the tin dung" << endl;
             TaiKhoanThanhToan::hienThiThongTin();
             TaiKhoanTietKiem::hienThiThongTin();
-            cout << "Han muc vay: " << hanMucVay << endl;
-            cout << "So tien con lai: " << soTienConLai << endl;
+            TaiKhoanVayMuon::hienThiThongTin();
         }
         
 };
@@ -403,8 +380,8 @@ public:
             if (taiKhoanGuiTien->getSoDu() >= soTien) {
                 taiKhoanGuiTien->setSoDu(taiKhoanGuiTien->getSoDu() - soTien);
                 taiKhoanNhanTien->setSoDu(taiKhoanNhanTien->getSoDu() + soTien);
-                cout << "Chuyen tien thanh cong!" << endl;
-                Time();
+                // cout << "Chuyen tien thanh cong!" << endl;
+                // Time();
             } else {
                 cout << "Khong du so du de thuc hien giao dich!" << endl;
             }
@@ -459,12 +436,12 @@ public:
 
 
 int main() {
-    TaiKhoanThanhToan *tk1 = new TaiKhoanCoTheTinDung("1", "Nguyen Van A", 1000, 5000, 200,2000,5000);
-    TaiKhoanThanhToan *tk2 = new TaiKhoanCoTheTinDung("2", "Nguyen Van B", 1000, 5000,300,2000,5000);
+    TaiKhoanThanhToan *tk1 = new TaiKhoanCoTheTinDung("1", "Nguyen Van A", 100.000, 5000);
+    TaiKhoanThanhToan *tk2 = new TaiKhoanCoTheTinDung("2", "Nguyen Van B", 100.000, 5000);
 
-    TaiKhoanTietKiem *tk3 = new TaiKhoanTietKiem("3", "Nguyen Van C", 1000, 5000,"213",2000);
+    TaiKhoanTietKiem *tk3 = new TaiKhoanCoTheTinDung("3", "Nguyen Van C", 100.000, 5.000,0.08,12);
 
-    TaiKhoanVayMuon *tk4 = new TaiKhoanVayMuon("4", "Nguyen Van D", 1000, 5000, 200,2000,5000);
+    TaiKhoanVayMuon *tk4 = new TaiKhoanCoTheTinDung("4", "Nguyen Van D", 100.000, 50.000, 0.03);
     Controller *c1 = new Controller();
     c1->themTaiKhoan(tk1);
     c1->themTaiKhoan(tk2);
@@ -474,23 +451,23 @@ int main() {
 
     //chuyển tiền
     cout<<"---------Chuyen tien------------"<<endl;
-    c1->chuyenKhoanGiuaTaiKhoanThanhToan("1", "2", 1000);
-    cout<<"Tk1 sau khi chuyen tien: "<<tk1->getSoDu()<<endl;
-    cout<<"Tk2 sau khi nhan tien: "<<tk2->getSoDu()<<endl;
+    c1->chuyenKhoanGiuaTaiKhoanThanhToan("1", "2", 10.000);
+    cout<<"Tk1 sau khi chuyen tien: "<< fixed << setprecision(3)<<tk1->getSoDu()<<endl;
+    cout<<"Tk2 sau khi nhan tien: "<< fixed << setprecision(3)<<tk2->getSoDu()<<endl;
 
     // gửi tiết kiệm
     cout<<"------------Gui tiet kiem----------"<<endl;
-    tk3->guiTietKiem(200);
+    tk3->guiTietKiem();
     // vay tiền
     cout<<"--------------Vay tien--------"<<endl;
-    tk4->VayTien(2000);
+    tk4->VayTien();
 
 
 
 
     //save file
-    tk4->lichsuVay(2000);
-    tk3->lichsuguiTienTietKiem(200);
+    // tk4->Vay(2000);
+    // tk3->guiTienTietKiem(200);
 
     
 

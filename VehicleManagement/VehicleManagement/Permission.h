@@ -10,6 +10,6 @@ protected:
 public:
 	void addPermission();
 	void editPermission();
-	void deletepermission();
-	void searvh
+	void deletePermission();
+	void searchPermission();
 };
