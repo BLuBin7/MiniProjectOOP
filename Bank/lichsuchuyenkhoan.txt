@@ -198,3 +198,18 @@ Ma tai khoan nhan tien: 2
 So tien chuyen khoan: 10
 Thoi gian: Mon Jun 05 22:49:12 2023
 
+Ma tai khoan gui tien: 1
+Ma tai khoan nhan tien: 2
+So tien chuyen khoan: 10
+Thoi gian: Tue Jun 06 13:06:01 2023
+
+Ma tai khoan gui tien: 1
+Ma tai khoan nhan tien: 2
+So tien chuyen khoan: 10
+Thoi gian: Tue Jun 06 13:17:23 2023
+
+Ma tai khoan gui tien: 1
+Ma tai khoan nhan tien: 2
+So tien chuyen khoan: 10
+Thoi gian: Tue Jun 06 14:17:29 2023
+
